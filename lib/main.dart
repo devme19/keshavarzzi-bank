@@ -1,3 +1,4 @@
+import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'localization/app_localization.dart';
@@ -5,6 +6,11 @@ import 'presentation/routes/app_routes.dart';
 
 void main() {
   runApp(const MyApp());
+  // WidgetsFlutterBinding.ensureInitialized();
+  // DevicePreview(
+  //   enabled: true,
+  //   builder: (context) => MyApp(), // Wrap your app
+  // );
 }
 
 class MyApp extends StatelessWidget {
@@ -15,11 +21,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
+      // useInheritedMediaQuery: true,
       translations: AppLocalization(),
       locale: Get.deviceLocale, //for setting localization strings
       fallbackLocale: const Locale('fa', 'IR'),
       title: 'bank',
-      initialRoute: AppRoutes.loginPage,
+      initialRoute: AppRoutes.firstPage,
+      builder: DevicePreview.appBuilder,
       getPages: AppRoutes.pages,
     );
   }

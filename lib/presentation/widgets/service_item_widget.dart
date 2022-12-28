@@ -4,8 +4,9 @@ import 'package:flutter/material.dart';
 import 'common_image_view.dart';
 
 class ServiceItemWidget extends StatelessWidget {
-  ServiceItemWidget({Key? key,this.title,this.imgPath}) : super(key: key);
-  String? title,imgPath;
+  ServiceItemWidget({Key? key,this.title,this.image}) : super(key: key);
+  String? title;
+  Widget? image;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -20,9 +21,8 @@ class ServiceItemWidget extends StatelessWidget {
       ),
       child: Row(
         children: [
-          CommonImageView(
+         image!,
 
-          )
         ],
       ),
     );

@@ -34,7 +34,7 @@ import '../themes/app_style.dart';
                textAlign: TextAlign.end,
                style: radioValue == item?
                AppStyle.txtIRANSansMobileFaNumBold12:
-               AppStyle.txtIRANSansMobileFaNum12Gray900
+               AppStyle.txtIRANSansMobileFaNum12W400Gray900
              ),
              activeColor: ColorConstant.teal900,
              value: item,

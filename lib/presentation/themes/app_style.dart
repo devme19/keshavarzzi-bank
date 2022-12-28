@@ -90,14 +90,7 @@ class AppStyle {
     fontFamily: 'IRANSansMobile',
     fontWeight: FontWeight.w500,
   );
-  static TextStyle txtIRANSansMobileFaNumBold12 = TextStyle(
-    color: ColorConstant.teal900,
-    fontSize: getFontSize(
-      12,
-    ),
-    fontFamily: 'IRANSansMobile',
-    fontWeight: FontWeight.bold,
-  );
+
   static TextStyle txtIRANSansMobileFaNumMedium17 = TextStyle(
     color: ColorConstant.teal900,
     fontSize: getFontSize(
@@ -178,14 +171,35 @@ class AppStyle {
   );
   static TextStyle txtIRANSansMobileFaNum12Gray900 = TextStyle(
     color: ColorConstant.gray900,
-    // height: getVerticalSize(2),
+    height: getVerticalSize(2),
+    // fontSize: getFontSize(
+    //   12,
+    // ),
+    fontFamily: 'IRANSansMobile',
+    fontWeight: FontWeight.w400,
+  );
+  static TextStyle txtIRANSansMobileFaNumBold12 = TextStyle(
+  color: ColorConstant.teal900,
+  // fontSize: getFontSize(
+  // 12,
+  // ),
+  fontFamily: 'IRANSansMobile',
+  fontWeight: FontWeight.bold,
+  );
+  static TextStyle txtIRANSansMobileFaNum12W400Gray900 = TextStyle(
+    color: ColorConstant.gray900,
+    fontFamily: 'IRANSansMobile',
+    fontWeight: FontWeight.w400,
+  );
+  static TextStyle txtIRANSansMobileFaNum12Height2Gray900 = TextStyle(
+    color: ColorConstant.gray900,
+    height: getVerticalSize(2),
     fontSize: getFontSize(
       12,
     ),
     fontFamily: 'IRANSansMobile',
     fontWeight: FontWeight.w400,
   );
-
   static TextStyle txtRobotoRegular20 = TextStyle(
     color: ColorConstant.black900,
     fontSize: getFontSize(

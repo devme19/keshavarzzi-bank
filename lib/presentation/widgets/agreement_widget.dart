@@ -64,7 +64,7 @@ class AgreementWidget extends StatelessWidget {
                           textDirection: TextDirection.rtl,
                           textAlign: TextAlign.justify,
 
-                          style: AppStyle.txtIRANSansMobileFaNum12Gray900
+                          style: AppStyle.txtIRANSansMobileFaNum12Height2Gray900
                       ),
                     ],
                   ),
