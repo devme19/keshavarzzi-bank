@@ -29,7 +29,7 @@ class AccountInformationRegisterPage extends StatelessWidget {
         appBar:
         CustomAppBar(
             height: getVerticalSize(81.00),
-            leadingWidth: 54,
+            leadingWidth: 65,
             centerTitle: true,
             title:
             Row(

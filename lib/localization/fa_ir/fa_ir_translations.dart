@@ -5,7 +5,7 @@ final Map<String, String> faIR = {
   "lbl4": "شروع",
   "lbl5": "نگارش  ۱.۲.۶",
   "lbl2": "؛",
-  "lbl3": "شرایط و ضوابط",
+  "lbl3": " شرایط و ضوابط",
   "lbl_app_navigation": "App Navigation",
   "msg_check_your_app_s":
   "Check your app's UI from the below demo screens of your app.",

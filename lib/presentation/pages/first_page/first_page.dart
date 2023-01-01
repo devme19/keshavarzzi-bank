@@ -34,7 +34,7 @@ class _FirstPageState extends State<FirstPage> {
         appBar:
         CustomAppBar(
             height: getVerticalSize(81.00),
-            leadingWidth: 54,
+            leadingWidth: 65,
             centerTitle: true,
             title: isAgreementShow?
             Row(
@@ -71,165 +71,186 @@ class _FirstPageState extends State<FirstPage> {
             ],
             styleType: Style.bgFillWhiteA700),
         body:
-        Column(
-          mainAxisSize: MainAxisSize.min,
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            Expanded(
-              child: Column(
-                children: [
-                  Align(
-                    alignment: Alignment.center,
+        SingleChildScrollView(
+          child: SizedBox(
+            height: height-appBarSize-2*statusBar!.toDouble(),
+            child: Column(
+              children: [
+                Padding(
+                  padding: getPadding(
+                    left: 30,
+                    right: 30,
+                  ),
+                  child: CommonImageView(
+                    imagePath: ImageConstant.imgImage1,
+                    height: getVerticalSize(
+                      113.00,
+                    ),
+                    width: getHorizontalSize(
+                      93.00,
+                    ),
+                  ),
+                ),
+                Container(
+                  margin: getMargin(
+                    left: 30,
+                    top: 20,
+                    right: 30,
+                  ),
+                  child: RichText(
+                    text: TextSpan(
+                      children: [
+                        TextSpan(
+                          text: "lbl".tr,
+                          style: TextStyle(
+                            color: ColorConstant.teal900,
+                            fontSize: getFontSize(
+                              25,
+                            ),
+                            fontFamily: 'IranNastaliq',
+                            fontWeight: FontWeight.w400,
+                          ),
+                        ),
+                        TextSpan(
+                          text: "lbl2".tr,
+                          style: TextStyle(
+                            color: ColorConstant.lime700,
+                            fontSize: getFontSize(
+                              25,
+                            ),
+                            fontFamily: 'IranNastaliq',
+                            fontWeight: FontWeight.w400,
+                          ),
+                        ),
+                        TextSpan(
+                          text: "msg2".tr,
+                          style: TextStyle(
+                            color: ColorConstant.teal900,
+                            fontSize: getFontSize(
+                              25,
+                            ),
+                            fontFamily: 'IranNastaliq',
+                            fontWeight: FontWeight.w400,
+                          ),
+                        ),
+                      ],
+                    ),
+                    textAlign: TextAlign.left,
+                  ),
+                ),
+                Container(
+                  margin: getMargin(
+                    left: 30,
+                    top: 40,
+                    right: 30,
+                  ),
+                  child: FittedBox(
+                    child: Row(
+                      children: [
+                        CircleCheck(),
+                        SizedBox(width: getSize(48),),
+                        Text("msg4".tr,
+                            style: AppStyle.txtIRANSansMobileFaNumMedium12),
+                        InkWell(
+                          child:  Text(
+                              "lbl3".tr,
+                              style: AppStyle.txtIRANSansMobileFaNumMedium12Lime700
+
+                          ),
+                          onTap: (){
+                            setState(() {
+                              isAgreementShow = true;
+                            });
+                            Get.bottomSheet(
+                                isScrollControlled: true,
+
+                                AgreementWidget()
+                            ).then((value) {
+                              setState(() {
+                                isAgreementShow = false;
+                              });
+                            });
+                          },
+                        ),
+                        // Expanded(
+                        //   child: RichText(
+                        //     text: TextSpan(
+                        //       children: [
+                        //         TextSpan(
+                        //           text: "lbl3".tr,
+                        //             recognizer: TapGestureRecognizer()..onTap = () {
+                        //             setState(() {
+                        //               isAgreementShow = true;
+                        //             });
+                        //               Get.bottomSheet(
+                        //                 isScrollControlled: true,
+                        //
+                        //                   AgreementWidget()
+                        //               ).then((value) {
+                        //                 setState(() {
+                        //                   isAgreementShow = false;
+                        //                 });
+                        //               });
+                        //             },
+                        //           style: AppStyle.txtIRANSansMobileFaNumMedium12Lime700
+                        //         ),
+                        //         TextSpan(
+                        //           text: "msg4".tr,
+                        //           style: AppStyle.txtIRANSansMobileFaNumMedium12
+                        //         ),
+                        //       ],
+                        //     ),
+                        //     textAlign: TextAlign.left,
+                        //   ),
+                        // ),
+                      ],
+                    ),
+                  ),
+                ),
+                CustomButton(
+                  onTap: (){
+                    Get.toNamed(AppRoutes.accountInformationRegisterPage);
+                  },
+                  width: 260,
+                  height: 44,
+                  text: "lbl33".tr,
+                  margin: getMargin(
+                    left: 29,
+                    top: 27,
+                    right: 30,
+                  ),
+                  // suffixWidget: Container(
+                  //   margin: getMargin(
+                  //     left: 6,
+                  //   ),
+                  //   child: CommonImageView(
+                  //     svgPath: ImageConstant.imgSettings20x20,
+                  //   ),
+                  // ),
+                  alignment: Alignment.center,
+                ),
+                SizedBox(height: getSize(64),),
+                Expanded(
+                  child: Align(
+                    alignment: FractionalOffset.bottomCenter,
                     child: Padding(
                       padding: getPadding(
-                        left: 30,
-                        right: 30,
+                        bottom: 30,
                       ),
-                      child: CommonImageView(
-                        imagePath: ImageConstant.imgImage1,
-                        height: getVerticalSize(
-                          113.00,
-                        ),
-                        width: getHorizontalSize(
-                          93.00,
-                        ),
+                      child: Text(
+                          "lbl5".tr,
+                          style: AppStyle.txtIRANSansMobileFaNum12Teal9007e
                       ),
                     ),
                   ),
-                  Align(
-                    alignment: Alignment.center,
-                    child: Container(
-                      margin: getMargin(
-                        left: 30,
-                        top: 20,
-                        right: 30,
-                      ),
-                      child: RichText(
-                        text: TextSpan(
-                          children: [
-                            TextSpan(
-                              text: "lbl".tr,
-                              style: TextStyle(
-                                color: ColorConstant.teal900,
-                                fontSize: getFontSize(
-                                  25,
-                                ),
-                                fontFamily: 'IranNastaliq',
-                                fontWeight: FontWeight.w400,
-                              ),
-                            ),
-                            TextSpan(
-                              text: "lbl2".tr,
-                              style: TextStyle(
-                                color: ColorConstant.lime700,
-                                fontSize: getFontSize(
-                                  25,
-                                ),
-                                fontFamily: 'IranNastaliq',
-                                fontWeight: FontWeight.w400,
-                              ),
-                            ),
-                            TextSpan(
-                              text: "msg2".tr,
-                              style: TextStyle(
-                                color: ColorConstant.teal900,
-                                fontSize: getFontSize(
-                                  25,
-                                ),
-                                fontFamily: 'IranNastaliq',
-                                fontWeight: FontWeight.w400,
-                              ),
-                            ),
-                          ],
-                        ),
-                        textAlign: TextAlign.left,
-                      ),
-                    ),
-                  ),
-                  Align(
-                    alignment: Alignment.center,
-                    child: Container(
-                      margin: getMargin(
-                        left: 30,
-                        top: 40,
-                        right: 30,
-                      ),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          CircleCheck(),
-                          RichText(
-                            text: TextSpan(
-                              children: [
-                                TextSpan(
-                                  text: "lbl3".tr,
-                                    recognizer: TapGestureRecognizer()..onTap = () {
-                                    setState(() {
-                                      isAgreementShow = true;
-                                    });
-                                      Get.bottomSheet(
-                                        isScrollControlled: true,
+                ),
 
-                                          AgreementWidget()
-                                      ).then((value) {
-                                        setState(() {
-                                          isAgreementShow = false;
-                                        });
-                                      });
-                                    },
-                                  style: AppStyle.txtIRANSansMobileFaNumMedium12Lime700
-                                ),
-                                TextSpan(
-                                  text: "msg4".tr,
-                                  style: AppStyle.txtIRANSansMobileFaNumMedium12
-                                ),
-                              ],
-                            ),
-                            textAlign: TextAlign.left,
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                  CustomButton(
-                    onTap: (){
-                      Get.toNamed(AppRoutes.accountInformationRegisterPage);
-                    },
-                    width: 260,
-                    height: 44,
-                    text: "lbl33".tr,
-                    margin: getMargin(
-                      left: 29,
-                      top: 27,
-                      right: 30,
-                    ),
-                    // suffixWidget: Container(
-                    //   margin: getMargin(
-                    //     left: 6,
-                    //   ),
-                    //   child: CommonImageView(
-                    //     svgPath: ImageConstant.imgSettings20x20,
-                    //   ),
-                    // ),
-                    alignment: Alignment.center,
-                  ),
-                ],
-              ),
+
+              ],
             ),
-            Align(
-              alignment: Alignment.center,
-              child: Padding(
-                padding: getPadding(
-                  bottom: 30,
-                ),
-                child: Text(
-                  "lbl5".tr,
-                  style: AppStyle.txtIRANSansMobileFaNum12Teal9007e
-                ),
-              ),
-            ),
-          ],
+          ),
         ),
+
       ),
     );
   }

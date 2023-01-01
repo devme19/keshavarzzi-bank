@@ -28,7 +28,7 @@ class OtpVerificationPage extends StatelessWidget {
         appBar:
         CustomAppBar(
             height: getVerticalSize(81.00),
-            leadingWidth: 54,
+            leadingWidth: 65,
             centerTitle: true,
             title:
             Row(
@@ -105,7 +105,7 @@ class OtpVerificationPage extends StatelessWidget {
                                   ),
                                 ),
                               ),
-                              height: getSize(50),
+                              height: getSize(40),
                               width: getSize(108),
                               child:  Center(
                                 child: Text(

@@ -28,7 +28,7 @@ class OtpVerificationForgetPasswordPage extends StatelessWidget {
         appBar:
         CustomAppBar(
             height: getVerticalSize(81.00),
-            leadingWidth: 54,
+            leadingWidth: 65,
             centerTitle: true,
             title:
             Row(
@@ -102,8 +102,8 @@ class OtpVerificationForgetPasswordPage extends StatelessWidget {
                               ),
                             ),
                           ),
-                          height: getSize(50),
-                          width: getSize(108),
+                          height: getSize(41),
+                          width: getHorizontalSize(100),
                           child:  Center(
                             child: Text(
                               "02:00",

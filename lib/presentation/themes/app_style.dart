@@ -193,7 +193,7 @@ class AppStyle {
   );
   static TextStyle txtIRANSansMobileFaNum12Height2Gray900 = TextStyle(
     color: ColorConstant.gray900,
-    height: getVerticalSize(2),
+    height: getVerticalSize(1.3),
     fontSize: getFontSize(
       12,
     ),

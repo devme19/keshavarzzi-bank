@@ -28,6 +28,8 @@ class ImageConstant {
 
   static String imgPlus = 'assets/images/img_plus.svg';
 
+  static String imgBg = 'assets/images/img_bg.png';
+
   static String imgImage1 = 'assets/images/img_image1.png';
 
   static String imgVuesaxoutlineinfocircleTeal900 =

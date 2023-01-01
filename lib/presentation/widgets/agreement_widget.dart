@@ -7,11 +7,6 @@ import 'package:get/get.dart';
 import '../themes/app_style.dart';
 
 class AgreementWidget extends StatelessWidget {
-  AgreementWidget({Key? key}) : super(key: key){
-    statusBar =
-        MediaQueryData.fromWindow(WidgetsBinding.instance.window).viewPadding.top;
-  }
-  double? statusBar;
   @override
   Widget build(BuildContext context) {
     return

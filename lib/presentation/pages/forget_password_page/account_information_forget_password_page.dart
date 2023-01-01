@@ -29,7 +29,7 @@ class AccountInformationForgetPasswordPage extends StatelessWidget {
         appBar:
         CustomAppBar(
             height: getVerticalSize(81.00),
-            leadingWidth: 54,
+            leadingWidth: 65,
             centerTitle: true,
             title:
             Row(
@@ -102,6 +102,7 @@ class AccountInformationForgetPasswordPage extends StatelessWidget {
                     DisableNumberWidget(num: "2",title: "lbl8".tr,),
                     SizedBox(height: getSize(10),),
                     DisableNumberWidget(num: "3",title: "lbl14".tr,),
+                    SizedBox(height: getSize(70),),
                   ],
                 ),
               ),

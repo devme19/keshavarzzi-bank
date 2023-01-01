@@ -26,7 +26,7 @@ class ChangePasswordPage extends StatelessWidget {
         appBar:
         CustomAppBar(
             height: getVerticalSize(81.00),
-            leadingWidth: 54,
+            leadingWidth: 65,
             centerTitle: true,
             title:
             Row(
@@ -102,25 +102,22 @@ class ChangePasswordPage extends StatelessWidget {
                   MyTextField(caption: "msg9".tr),
                 ],),
               ),
-              SizedBox(height: getSize(15),),
-              // AnimatedContainer(
-              //     duration: Duration(milliseconds: 300),
-              //     height:
-              //   ,
-              // ),
-              CustomButton(
-                onTap: (){
-                  // Get.toNamed(AppRoutes.accountInformationRegisterPage);
-                },
-                width: 260,
-                height: 44,
-                text: "lbl13".tr,
-                // margin: getMargin(
-                //   left: 29,
-                //   top: 27,
-                //   right: 30,
-                // ),
-                alignment: Alignment.center,
+              Container(
+                margin: getMargin(top: 15,right: 30,left: 30),
+                child: CustomButton(
+                  onTap: (){
+                    // Get.toNamed(AppRoutes.accountInformationRegisterPage);
+                  },
+                  width: 260,
+                  height: 44,
+                  text: "lbl13".tr,
+                  // margin: getMargin(
+                  //   left: 29,
+                  //   top: 27,
+                  //   right: 30,
+                  // ),
+                  alignment: Alignment.center,
+                ),
               ),
               SizedBox(height: getSize(27),),
             ],

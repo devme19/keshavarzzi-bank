@@ -5,12 +5,12 @@ import 'localization/app_localization.dart';
 import 'presentation/routes/app_routes.dart';
 
 void main() {
-  runApp(const MyApp());
-  // WidgetsFlutterBinding.ensureInitialized();
-  // DevicePreview(
-  //   enabled: true,
-  //   builder: (context) => MyApp(), // Wrap your app
-  // );
+  // runApp(const MyApp());
+  WidgetsFlutterBinding.ensureInitialized();
+  runApp(DevicePreview(
+    enabled: true,
+    builder: (context) => MyApp(), // Wrap your app
+  ));
 }
 
 class MyApp extends StatelessWidget {
@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
       locale: Get.deviceLocale, //for setting localization strings
       fallbackLocale: const Locale('fa', 'IR'),
       title: 'bank',
-      initialRoute: AppRoutes.firstPage,
+      initialRoute: AppRoutes.loginPage,
       builder: DevicePreview.appBuilder,
       getPages: AppRoutes.pages,
     );

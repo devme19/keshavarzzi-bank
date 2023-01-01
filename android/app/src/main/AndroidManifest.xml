@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="dimen.bankkeshavarzi.bank_keshavarzi">
+    package="dimen.bankkeshavarzi.bank_keshavarzee">
    <application
-        android:label="bank_keshavarzi"
+        android:label="bank_keshavarzee"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

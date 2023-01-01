@@ -26,7 +26,7 @@ class LoginPage extends StatelessWidget {
         appBar:
         CustomAppBar(
             height: getVerticalSize(81.00),
-            leadingWidth: 54,
+            leadingWidth: 65,
             leading: AppbarImage(
                 onTap: ()=> showPopupMenu(context),
                 height: getSize(24.00),

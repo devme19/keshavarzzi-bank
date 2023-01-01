@@ -16,25 +16,27 @@ void showPopupMenu(context) async {
         Radius.circular(getSize(7)),
       ),
     ),
-    position: const RelativeRect.fromLTRB(20, 100, 100, 100),
+    position:  RelativeRect.fromLTRB(getHorizontalSize(22), getVerticalSize(74), getHorizontalSize(73), 0),
     items: [
       PopupMenuItem(
         value: 1,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.end,
-          children: [
-            Text(
-              "msg14".tr,
-              textAlign: TextAlign.right,
-              style: AppStyle.txtIRANSansMobileFaNum12Teal9007e,
-            ),
-            SizedBox(width: getVerticalSize(9.67),),
-            CommonImageView(
-              svgPath: ImageConstant.imgComputer,
-              color: ColorConstant.teal900,
-              height: getVerticalSize(16.67),
-            ),
-          ],
+        child: FittedBox(
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              Text(
+                "msg14".tr,
+                textAlign: TextAlign.right,
+                style: AppStyle.txtIRANSansMobileFaNum12Teal9007e,
+              ),
+              SizedBox(width: getVerticalSize(9.67),),
+              CommonImageView(
+                svgPath: ImageConstant.imgComputer,
+                color: ColorConstant.teal900,
+                height: getVerticalSize(16.67),
+              ),
+            ],
+          ),
         ),
       ),
       PopupMenuItem(
